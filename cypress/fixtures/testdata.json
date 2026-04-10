@@ -1,0 +1,48 @@
+{
+  "signup": [
+    {
+      "name": "Rachana",
+      "email": "test2891@gmail.com",
+      "password": "test123",
+      "gender": "female",
+      "dob": { "day": "28", "month": "December", "year": "1990" },
+      "firstName": "Rachana",
+      "lastName": "Sinha",
+      "company": "Test Company",
+      "address1": "Pune",
+      "address2": "Pune",
+      "country": "India",
+      "state": "Maharashtra",
+      "city": "Pune",
+      "zipcode": "411057",
+      "mobile": "9876543210"
+    }
+  ],
+  "login": [
+    { "email": "test2891@gmail.com", "password": "test123" },
+    { "email": "test2891@gmail.com", "password": "wrongpassword" }
+  ],
+  "deleteAccount": [
+    { "email": "test2891@gmail.com", "password": "test123" }
+  ],
+  "existingEmail": [
+    { "name": "Rachana","email":"test2893@gmail.com" }
+  ],
+  "invalidLogin": [
+    { "email": "invalid@gmail.com", "password": "wrongpassword" },
+    { "email": "notexist@gmail.com", "password": "test123" }
+  ],
+  "newsletter": [
+    { "email": "test@gmail.com" }
+  ],
+  "product": [
+    { "name": "Summer White Top", "price": "Rs. 400", "brand": "H&M","availability": "In Stock", "condition": "New" },
+    { "name": "Men Tshirt" },
+    { "name": "Blue Top" }
+  ],
+  "contactUs": [
+    { "name": "Rachana Sinha", "email": "test2891@gmail.com","subject": "Test Subject", "message": "This is a test message." }
+  ]
+
+}
+
