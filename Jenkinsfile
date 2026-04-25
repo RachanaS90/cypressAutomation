@@ -6,21 +6,15 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/<your-username>/<your-repo>.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
         stage('Run Cypress Tests') {
             steps {
-                sh 'npx cypress run'
+                bat 'npx cypress run'
             }
         }
     }
