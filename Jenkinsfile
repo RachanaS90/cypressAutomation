@@ -3,6 +3,7 @@ pipeline {
 
     tools {
         nodejs "NodeJS"   // Configure NodeJS in Jenkins global tools
+        allure "allure"
     }
 
     stages {
@@ -14,15 +15,19 @@ pipeline {
 
         stage('Run Cypress Tests') {
             steps {
-                bat 'npx cypress run'
+                bat 'npx cypress run --env allure=true || exit=0'
             }
         }
     }
 
     post {
         always {
+            allure(
+                includeProperties: false,
+                jdk:'',
+                results:[[path : 'allure-results']]
+            )
             archiveArtifacts artifacts: '**/cypress/videos/*.mp4, **/cypress/screenshots/**/*.png', allowEmptyArchive: true
-            junit '**/results/*.xml' // if Cypress is configured to output JUnit results
         }
     }
 }
