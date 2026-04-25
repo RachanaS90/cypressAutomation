@@ -15,7 +15,7 @@ pipeline {
 
         stage('Run Cypress Tests') {
             steps {
-                bat 'npx cypress run --env allure=true || exit=0'
+                bat 'npx cypress run --env allure=true || exit 0'
             }
         }
     }
@@ -27,7 +27,7 @@ pipeline {
                 jdk:'',
                 results:[[path : 'allure-results']]
             )
-            archiveArtifacts artifacts: '**/cypress/videos/*.mp4, **/cypress/screenshots/**/*.png', allowEmptyArchive: true
+           archiveArtifacts artifacts: 'cypress/screenshots/**/*.png', allowEmptyArchive: true
         }
     }
 }
