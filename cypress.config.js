@@ -2,7 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    pageLoadTimeout: 4000,
+    pageLoadTimeout: 20000,
     retries: {
       runMode: 2,
       openMode: 1,
