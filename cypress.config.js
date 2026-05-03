@@ -1,4 +1,4 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
   e2e: {
@@ -12,7 +12,7 @@ module.exports = defineConfig({
       return config;
     },
     baseUrl: "https://automationexercise.com",
-    specPattern: "cypress/e2e/**/*.cy.{js,jsx,ts,tsx}",
+    specPattern: "cypress/e2e/**/*.cy.js",
     supportFile: "cypress/support/e2e.js",
   },
   env: {
