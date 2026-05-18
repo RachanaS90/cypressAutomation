@@ -9,6 +9,7 @@ class HomePage {
 
     clickLogin() {
         cy.get("a[href='/login']").click();
+
     }
 
     clickProducts() {

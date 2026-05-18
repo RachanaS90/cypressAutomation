@@ -1,6 +1,8 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
+  projectId: 'j188vo',
+  
   e2e: {
     pageLoadTimeout: 20000,
     retries: {
@@ -18,5 +20,8 @@ module.exports = defineConfig({
   env: {
     allure: true
   },
-  reporter: "spec",
+  reporter: "allure-commandline",
+  reporterOptions: {
+    allureResults: "allure-results",
+  },
 });
